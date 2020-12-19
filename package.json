@@ -1,0 +1,34 @@
+{
+  "name": "xjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx rollup -c",
+    "build:legacy": "cross-env BUILD_MODE=legacy npm run build",
+    "build:dev": "cross-env NODE_ENV=development npm run build",
+    "build:all": "cross-env npm run build && npm run build:legacy && npm run build:dev"
+  },
+  "author": "axtk",
+  "license": "ISC",
+  "dependencies": {
+    "create-element": "github:axtk/create-element",
+    "document-config": "github:axtk/document-config",
+    "event-manager": "github:axtk/event-manager",
+    "import-resource": "github:axtk/import-resource",
+    "proxy-element": "github:axtk/proxy-element",
+    "router": "github:axtk/router"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "rollup": "^2.34.2",
+    "rollup-plugin-sizediff": "github:axtk/rollup-plugin-sizediff",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}
